@@ -88,6 +88,8 @@ std::vector<Option> options;
 // Protected global variables
 #if defined(HAS_SCREEN)
 TFT_eSPI tft = TFT_eSPI();         // Invoke custom library
+TFT_eFEX fex(&tft); // определеие tft_efex
+fex.setRusFont(); // Включение кириллицы
 TFT_eSprite sprite = TFT_eSprite(&tft);
 TFT_eSprite draw = TFT_eSprite(&tft);
 volatile int tftWidth = TFT_HEIGHT;
@@ -178,6 +180,27 @@ void begin_tft(){
   setBrightness(bruceConfig.bright, false);
 }
 
+/*Для смены языка*/
+
+void drawCentreRusString(String text, int x, int y, uint8_t font = 1) {
+  int16_t textWidth = fex.textWidth(text);  // Ширина текста
+
+  // Устанавливаем шрифт (если используется TFT_eFEX с разными шрифтами)
+  // fex.setFont(font);  // Если поддерживается
+
+  fex.printRusText(text, x, y);  // Вывод текста
+}
+
+void redrawMenu() {
+  tft.fillScreen(TFT_BLACK); // Очистка экрана
+  tft.setFreeFont(&MyRussianFont); // Установка шрифта
+  tft.printRusText(LanguageManager::getString(STR_MENU).c_str(), 10, 10); // Вывод текста
+}
+
+void change_language(Language lang){
+  LanguageManager::setLanguage(lang);
+  redrawMenu(); // Функция для перерисовки меню
+}
 
 /*********************************************************************
  **  Function: boot_screen
@@ -187,11 +210,11 @@ void boot_screen() {
   tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
   tft.setTextSize(FM);
   tft.drawPixel(0,0,bruceConfig.bgColor);
-  tft.drawCentreString("Bruce", tftWidth / 2, 10, 1);
+  tft.drawCentreRusString(LanguageManager::getString(STR_BRUCE).c_str(), tftWidth / 2, 10, 1);
   tft.setTextSize(FP);
   tft.drawCentreString(BRUCE_VERSION, tftWidth / 2, 25, 1);
   tft.setTextSize(FM);
-  tft.drawCentreString("PREDATORY FIRMWARE", tftWidth / 2, tftHeight+2, 1); // will draw outside the screen on non touch devices
+  tft.drawCentreRusString(LanguageManager::getString(STR_PREDATOR).c_str(), tftWidth / 2, tftHeight+2); // will draw outside the screen on non touch devices
 }
 
 /*********************************************************************

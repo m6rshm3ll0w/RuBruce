@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/core/configLanguage.cpp",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1742743096696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742743194289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+#include <iostream>\r\n+#include <string>\r\n+using namespace std;\r\n+\r\n+void setLanguage(string lang){\r\n+    setlocale(LC_ALL, lang);\r\n+}\r\n+\r\n+int main()\r\n+{\r\n+    string\r\n+    cin >> ;\r\n+    return 0;\r\n+}\r\n"
+                },
+                {
+                    "date": 1742743204553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,19 +7,8 @@\n }\r\n \r\n int main()\r\n {\r\n-    string\r\n-    cin >> ;\r\n+    string input;\r\n+    cin >> input;\r\n     return 0;\r\n }\r\n-#include <iostream>\r\n-using namespace std;\r\n-\r\n-void setLanguage(string lang){\r\n-    setlocale(LC_ALL, \"Russian\");\r\n-}\r\n-\r\n-int main()\r\n-{\r\n-    return 0;\r\n-}\r\n"
+                },
+                {
+                    "date": 1742743229898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n int main()\r\n {\r\n     string input;\r\n     cin >> input;\r\n+    setLanguage(input)\r\n     return 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1742743256929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,13 @@\n }\r\n \r\n int main()\r\n {\r\n-    string input;\r\n+    string input, temp;\r\n     cin >> input;\r\n-    setLanguage(input)\r\n+    setLanguage(input);\r\n+    while (true){\r\n+\r\n+        cin\r\n+    }\r\n     return 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1742743275956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     string input, temp;\r\n     cin >> input;\r\n     setLanguage(input);\r\n     while (true){\r\n-\r\n-        cin\r\n+        cin >> temp;\r\n+        cout << temp;\r\n     }\r\n     return 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1742743293889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n     cin >> input;\r\n     setLanguage(input);\r\n     while (true){\r\n         cin >> temp;\r\n-        cout << temp;\r\n+        if (){\r\n+            cout << temp;\r\n+        }\r\n     }\r\n     return 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1742748955254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,24 @@\n #include <iostream>\r\n #include <string>\r\n using namespace std;\r\n \r\n-void setLanguage(string lang){\r\n-    setlocale(LC_ALL, lang);\r\n+void setLanguage(string lang) {\r\n+    setlocale(LC_ALL, lang.c_str());\r\n }\r\n \r\n int main()\r\n {\r\n     string input, temp;\r\n     cin >> input;\r\n     setLanguage(input);\r\n-    while (true){\r\n+    while (true) {\r\n         cin >> temp;\r\n-        if (){\r\n-            cout << temp;\r\n+        if (!temp.empty()) { // Проверяем, что строка не пустая\r\n+            cout << temp << endl;\r\n         }\r\n+        else if (temp == \"exit\") {\r\n+            break;\r\n+        }\r\n     }\r\n     return 0;\r\n }\r\n"
+                }
+            ],
+            "date": 1742743096696,
+            "name": "Commit-0",
+            "content": "#include <iostream>\r\nusing namespace std;\r\n\r\nvoid setLanguage(string lang){\r\n    setlocale(LC_ALL, \"Russian\");\r\n}\r\n\r\nint main()\r\n{\r\n    return 0;\r\n}\r\n"
+        }
+    ]
+}

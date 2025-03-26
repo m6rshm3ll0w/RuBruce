@@ -19,6 +19,7 @@
 #include "core/config.h"
 #include "core/startup_app.h"
 #include "core/serial_commands/cli.h"
+#include "core/language.h"
 
 #if defined(HAS_RTC)
   #include "../lib/RTC/cplus_RTC.h"
@@ -30,6 +31,7 @@
 // Declaração dos objetos TFT
 #if defined(HAS_SCREEN)
   #include <TFT_eSPI.h>
+  #include <TFT_eFEX.h>
   extern TFT_eSPI tft;
   extern TFT_eSprite sprite;
   extern TFT_eSprite draw;

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/core/language.h",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1742751914510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742752847308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n // Поддерживаемые языки\r\n enum Language {\r\n     LANG_RUSSIAN,\r\n     LANG_ENGLISH,\r\n+    LANG_UKRAINIAN,\r\n     // Добавьте другие языки по необходимости\r\n };\r\n \r\n // Ключи для переведенных строк\r\n@@ -27,8 +28,11 @@\n \r\n     // Получить переведенную строку\r\n     static std::string getString(StringKey key);\r\n \r\n+    // Получить текущий язык\r\n+    static Language getCurrentLanguage();\r\n+\r\n private:\r\n     // Словарь с переводами\r\n     static std::map<Language, std::map<StringKey, std::string>> translations;\r\n \r\n"
+                },
+                {
+                    "date": 1742753077555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,18 +8,16 @@\n enum Language {\r\n     LANG_RUSSIAN,\r\n     LANG_ENGLISH,\r\n     LANG_UKRAINIAN,\r\n-    // Добавьте другие языки по необходимости\r\n };\r\n \r\n // Ключи для переведенных строк\r\n enum StringKey {\r\n     STR_WELCOME,\r\n     STR_BOOT_SCREEN,\r\n     STR_MENU,\r\n     STR_EXIT,\r\n-    // Добавьте другие ключи по необходимости\r\n };\r\n \r\n class LanguageManager {\r\n public:\r\n"
+                }
+            ],
+            "date": 1742751914510,
+            "name": "Commit-0",
+            "content": "#ifndef LANGUAGE_H\r\n#define LANGUAGE_H\r\n\r\n#include <map>\r\n#include <string>\r\n\r\n// Поддерживаемые языки\r\nenum Language {\r\n    LANG_RUSSIAN,\r\n    LANG_ENGLISH,\r\n    // Добавьте другие языки по необходимости\r\n};\r\n\r\n// Ключи для переведенных строк\r\nenum StringKey {\r\n    STR_WELCOME,\r\n    STR_BOOT_SCREEN,\r\n    STR_MENU,\r\n    STR_EXIT,\r\n    // Добавьте другие ключи по необходимости\r\n};\r\n\r\nclass LanguageManager {\r\npublic:\r\n    // Установить язык\r\n    static void setLanguage(Language lang);\r\n\r\n    // Получить переведенную строку\r\n    static std::string getString(StringKey key);\r\n\r\nprivate:\r\n    // Словарь с переводами\r\n    static std::map<Language, std::map<StringKey, std::string>> translations;\r\n\r\n    // Текущий язык\r\n    static Language currentLanguage;\r\n};\r\n\r\n#endif\r\n"
+        }
+    ]
+}

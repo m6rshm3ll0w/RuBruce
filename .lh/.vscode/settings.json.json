@@ -1,0 +1,26 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1742743112952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742743207987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,10 @@\n         \"ratio\": \"cpp\",\r\n         \"*.tpp\": \"cpp\",\r\n         \"condition_variable\": \"cpp\",\r\n         \"mutex\": \"cpp\",\r\n-        \"thread\": \"cpp\"\r\n+        \"thread\": \"cpp\",\r\n+        \"xstring\": \"cpp\"\r\n     },\r\n     \"files.trimTrailingWhitespace\": true,\r\n     \"files.insertFinalNewline\": true,\r\n \r\n"
+                },
+                {
+                    "date": 1742751508015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,10 @@\n         \"*.tpp\": \"cpp\",\r\n         \"condition_variable\": \"cpp\",\r\n         \"mutex\": \"cpp\",\r\n         \"thread\": \"cpp\",\r\n-        \"xstring\": \"cpp\"\r\n+        \"xstring\": \"cpp\",\r\n+        \"format\": \"cpp\"\r\n     },\r\n     \"files.trimTrailingWhitespace\": true,\r\n     \"files.insertFinalNewline\": true,\r\n \r\n"
+                }
+            ],
+            "date": 1742743112952,
+            "name": "Commit-0",
+            "content": "{\r\n    \"editor.codeActionsOnSave\": {\r\n        \"source.fixAll.eslint\": \"explicit\",\r\n        \"source.organizeImports\": \"explicit\"\r\n    },\r\n    \"editor.detectIndentation\": true,\r\n    \"editor.guides.bracketPairs\": \"active\",\r\n\r\n    \"idf.portWin\": \"COM4\",\r\n\r\n    \"files.associations\": {\r\n        \"Jenkinsfile\": \"groovy\",\r\n        \"*.toml\": \"properties\",\r\n        \"iosfwd\": \"cpp\",\r\n        \"iostream\": \"cpp\",\r\n        \"array\": \"cpp\",\r\n        \"atomic\": \"cpp\",\r\n        \"*.tcc\": \"cpp\",\r\n        \"cctype\": \"cpp\",\r\n        \"clocale\": \"cpp\",\r\n        \"cmath\": \"cpp\",\r\n        \"cstdarg\": \"cpp\",\r\n        \"cstddef\": \"cpp\",\r\n        \"cstdint\": \"cpp\",\r\n        \"cstdio\": \"cpp\",\r\n        \"cstdlib\": \"cpp\",\r\n        \"cstring\": \"cpp\",\r\n        \"cwchar\": \"cpp\",\r\n        \"cwctype\": \"cpp\",\r\n        \"deque\": \"cpp\",\r\n        \"unordered_map\": \"cpp\",\r\n        \"vector\": \"cpp\",\r\n        \"exception\": \"cpp\",\r\n        \"algorithm\": \"cpp\",\r\n        \"functional\": \"cpp\",\r\n        \"iterator\": \"cpp\",\r\n        \"map\": \"cpp\",\r\n        \"memory\": \"cpp\",\r\n        \"memory_resource\": \"cpp\",\r\n        \"numeric\": \"cpp\",\r\n        \"optional\": \"cpp\",\r\n        \"random\": \"cpp\",\r\n        \"set\": \"cpp\",\r\n        \"string\": \"cpp\",\r\n        \"string_view\": \"cpp\",\r\n        \"system_error\": \"cpp\",\r\n        \"tuple\": \"cpp\",\r\n        \"type_traits\": \"cpp\",\r\n        \"utility\": \"cpp\",\r\n        \"fstream\": \"cpp\",\r\n        \"initializer_list\": \"cpp\",\r\n        \"istream\": \"cpp\",\r\n        \"limits\": \"cpp\",\r\n        \"new\": \"cpp\",\r\n        \"ostream\": \"cpp\",\r\n        \"sstream\": \"cpp\",\r\n        \"stdexcept\": \"cpp\",\r\n        \"streambuf\": \"cpp\",\r\n        \"cinttypes\": \"cpp\",\r\n        \"typeinfo\": \"cpp\",\r\n        \"bitset\": \"cpp\",\r\n        \"complex\": \"cpp\",\r\n        \"ctime\": \"cpp\",\r\n        \"regex\": \"cpp\",\r\n        \"list\": \"cpp\",\r\n        \"unordered_set\": \"cpp\",\r\n        \"iomanip\": \"cpp\",\r\n        \"chrono\": \"cpp\",\r\n        \"ratio\": \"cpp\",\r\n        \"*.tpp\": \"cpp\",\r\n        \"condition_variable\": \"cpp\",\r\n        \"mutex\": \"cpp\",\r\n        \"thread\": \"cpp\"\r\n    },\r\n    \"files.trimTrailingWhitespace\": true,\r\n    \"files.insertFinalNewline\": true,\r\n\r\n    \"githubPullRequests.ignoredPullRequestBranches\": [\r\n        \"main\"\r\n    ],\r\n    \"cmake.sourceDirectory\": \"C:/Projetos/Bruce/lib/M5GFX\",\r\n\r\n    \"[cpp]\": {\r\n        \"editor.defaultFormatter\": \"ms-vscode.cpptools\",\r\n        \"editor.rulers\": [120],\r\n        \"editor.tabSize\": 4,\r\n        \"editor.formatOnSave\": false,\r\n        \"editor.codeActionsOnSave\": {\r\n            \"source.organizeImports\": \"explicit\"\r\n        },\r\n        \"editor.formatOnType\": true,\r\n    },\r\n    \"C_Cpp.errorSquiggles\": \"disabled\",\r\n}\r\n"
+        }
+    ]
+}

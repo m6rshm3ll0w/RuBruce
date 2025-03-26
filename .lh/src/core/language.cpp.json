@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/core/language.cpp",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1742751964678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742752874389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,15 @@\n         {STR_MENU, \"Menu\"},\r\n         {STR_EXIT, \"Exit\"},\r\n         // Добавьте другие строки для английского языка\r\n     }},\r\n+    {LANG_UKRAINIAN, {\r\n+        {STR_WELCOME, \"Ласкаво просимо\"},\r\n+        {STR_BOOT_SCREEN, \"Завантаження...\"},\r\n+        {STR_MENU, \"Меню\"},\r\n+        {STR_EXIT, \"Вихід\"},\r\n+        // Добавьте другие строки для украинского языка\r\n+    }},\r\n     // Добавьте другие языки по необходимости\r\n };\r\n \r\n // Инициализация текущего языка\r\n@@ -30,4 +37,9 @@\n // Получить переведенную строку\r\n std::string LanguageManager::getString(StringKey key) {\r\n     return translations[currentLanguage][key];\r\n }\r\n+\r\n+// Получить текущий язык\r\n+Language LanguageManager::getCurrentLanguage() {\r\n+    return currentLanguage;\r\n+}\r\n"
+                },
+                {
+                    "date": 1742753085440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,23 +6,20 @@\n         {STR_WELCOME, \"Добро пожаловать\"},\r\n         {STR_BOOT_SCREEN, \"Загрузка...\"},\r\n         {STR_MENU, \"Меню\"},\r\n         {STR_EXIT, \"Выход\"},\r\n-        // Добавьте другие строки для русского языка\r\n     }},\r\n     {LANG_ENGLISH, {\r\n         {STR_WELCOME, \"Welcome\"},\r\n         {STR_BOOT_SCREEN, \"Booting...\"},\r\n         {STR_MENU, \"Menu\"},\r\n         {STR_EXIT, \"Exit\"},\r\n-        // Добавьте другие строки для английского языка\r\n     }},\r\n     {LANG_UKRAINIAN, {\r\n         {STR_WELCOME, \"Ласкаво просимо\"},\r\n         {STR_BOOT_SCREEN, \"Завантаження...\"},\r\n         {STR_MENU, \"Меню\"},\r\n         {STR_EXIT, \"Вихід\"},\r\n-        // Добавьте другие строки для украинского языка\r\n     }},\r\n     // Добавьте другие языки по необходимости\r\n };\r\n \r\n"
+                }
+            ],
+            "date": 1742751964678,
+            "name": "Commit-0",
+            "content": "#include \"language.h\"\r\n\r\n// Инициализация словаря с переводами\r\nstd::map<Language, std::map<StringKey, std::string>> LanguageManager::translations = {\r\n    {LANG_RUSSIAN, {\r\n        {STR_WELCOME, \"Добро пожаловать\"},\r\n        {STR_BOOT_SCREEN, \"Загрузка...\"},\r\n        {STR_MENU, \"Меню\"},\r\n        {STR_EXIT, \"Выход\"},\r\n        // Добавьте другие строки для русского языка\r\n    }},\r\n    {LANG_ENGLISH, {\r\n        {STR_WELCOME, \"Welcome\"},\r\n        {STR_BOOT_SCREEN, \"Booting...\"},\r\n        {STR_MENU, \"Menu\"},\r\n        {STR_EXIT, \"Exit\"},\r\n        // Добавьте другие строки для английского языка\r\n    }},\r\n    // Добавьте другие языки по необходимости\r\n};\r\n\r\n// Инициализация текущего языка\r\nLanguage LanguageManager::currentLanguage = LANG_ENGLISH;\r\n\r\n// Установить язык\r\nvoid LanguageManager::setLanguage(Language lang) {\r\n    currentLanguage = lang;\r\n}\r\n\r\n// Получить переведенную строку\r\nstd::string LanguageManager::getString(StringKey key) {\r\n    return translations[currentLanguage][key];\r\n}\r\n"
+        }
+    ]
+}

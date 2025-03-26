@@ -70,7 +70,9 @@
         "*.tpp": "cpp",
         "condition_variable": "cpp",
         "mutex": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "xstring": "cpp",
+        "format": "cpp"
     },
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -90,4 +92,5 @@
         },
         "editor.formatOnType": true,
     },
+    "C_Cpp.errorSquiggles": "disabled",
 }
